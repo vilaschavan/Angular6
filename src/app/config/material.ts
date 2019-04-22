@@ -9,7 +9,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatMenuModule} from '@angular/material/menu';
-
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -23,7 +23,8 @@ import {MatMenuModule} from '@angular/material/menu';
         MatListModule,
         MatFormFieldModule,
         MatExpansionModule,
-        MatMenuModule],
+        MatMenuModule,
+        MatTableModule],
     exports: [MatButtonModule,
         MatCheckboxModule,
         MatCardModule,
@@ -34,7 +35,8 @@ import {MatMenuModule} from '@angular/material/menu';
         MatListModule,
         MatFormFieldModule,
         MatExpansionModule,
-        MatMenuModule],
+        MatMenuModule,
+        MatTableModule],
 })
 
 export class MaterialModule { }

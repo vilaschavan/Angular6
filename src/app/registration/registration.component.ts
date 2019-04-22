@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Validators, FormBuilder, FormGroup, FormControl , ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
