@@ -1,31 +1,23 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ContactComponent } from './contact.component';
-import { MaterialModule } from '../config/material';
-import { HeaderComponent } from '../header/header.component';
-import { FooterComponent } from '../footer/footer.component';
+import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { RecordsService } from '../services/records.service';
 
-describe('ContactComponent', () => {
-  let component: ContactComponent;
-  let fixture: ComponentFixture<ContactComponent>;
+describe('RecordsService', () => {
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ContactComponent, HeaderComponent, FooterComponent ],
-      imports: [MaterialModule],
-      providers: [RecordsService]
-    })
-    .compileComponents();
-  }));
+      beforeEach(() => TestBed.configureTestingModule({
+        imports: [HttpClientTestingModule],
+        providers: [RecordsService]
+      }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ContactComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+       it('should be created', () => {
+        const service: RecordsService = TestBed.get(RecordsService);
+        expect(service).toBeTruthy();
+       });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  /*     it('should have getData function', () => {
+        const service: RecordsService = TestBed.get(RecordsService);
+        expect(service.getData).toBeTruthy();
+       });
+  */
+// tslint:disable-next-line:eofline
 });
