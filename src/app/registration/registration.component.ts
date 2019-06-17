@@ -4,7 +4,7 @@ import { Validators, FormBuilder, FormGroup, FormControl , ReactiveFormsModule }
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
-  styleUrls: ['./registration.component.css']
+  styleUrls: ['./registration.component.less']
 })
 export class RegistrationComponent implements OnInit {
 

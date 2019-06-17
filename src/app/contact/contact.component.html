@@ -2,11 +2,24 @@
   contact works!
 </p>
 
-<div *ngFor="let item of records">
- <table> 
-  <tr>
-    <td>{{item.name}}</td>
-    <td>{{item.online}}</td>
-  </tr>
-  </table>
-</div>
+<button (click)=onSave()>Save data on Server</button>
+
+<br><br>
+
+<button (click)=onGet($event)>Get Server data</button>
+
+<br> <br>
+
+<div fxLayout="row">
+  <div fxFlex="100">
+    <div *ngFor="let item of courseDatas">
+      <table>  
+        <tr>
+          <td>{{item.capacity}}</td>
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+ </div>
