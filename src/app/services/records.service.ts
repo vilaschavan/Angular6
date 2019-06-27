@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable, throwError, from } from 'rxjs';
-import { CourseData } from '../contact/contact.component';
+import { CourseData } from '../interface/courseData';
 
 @Injectable({
   providedIn: 'root'

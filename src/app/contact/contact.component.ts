@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecordsService } from '../services/records.service';
-
-export interface CourseData {
-  name: string;
-  capacity: number;
-  id: number;
-}
+import { CourseData } from '../interface/courseData';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-contact',

@@ -1,23 +1,31 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RecordsService } from '../services/records.service';
+import { CourseData } from '../interface/CourseData';
 
-describe('RecordsService', () => {
+describe('Contact Service', () => {
 
       beforeEach(() => TestBed.configureTestingModule({
         imports: [HttpClientTestingModule],
         providers: [RecordsService]
       }));
 
-       it('should be created', () => {
+       it('Record Service should be created', () => {
         const service: RecordsService = TestBed.get(RecordsService);
         expect(service).toBeTruthy();
        });
 
-  /*     it('should have getData function', () => {
-        const service: RecordsService = TestBed.get(RecordsService);
-        expect(service.getData).toBeTruthy();
-       });
-  */
-// tslint:disable-next-line:eofline
+       it('be able to retrieve info from the API GET', () => {
+        const service1: RecordsService = TestBed.get(RecordsService);
+
+        service1.getServer().subscribe(get => {
+            expect(get.length).toBe(2);
+            console.log('Length: ' + get.length);
+        });
+
+      //  const request = httpMock.expectOne( `${service.ROOT_URl}/posts`);
+      //  expect(request.request.method).toBe('GET');
+      //  request.flush(dummyPosts);
+        });
+
 });
