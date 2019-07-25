@@ -25,6 +25,6 @@ export class RecordsService {
       .pipe(
         map((res: CourseData[]) => res),
         );
-  } }
+  }
 
 }
