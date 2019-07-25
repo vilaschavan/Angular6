@@ -15,7 +15,7 @@ describe('Contact Service', () => {
         expect(service).toBeTruthy();
        });
 
-       it('be able to retrieve info from the API GET', () => {
+       it('be able to retrieve info from the API GET length', () => {
         const service1: RecordsService = TestBed.get(RecordsService);
 
         service1.getServer().subscribe(get => {
